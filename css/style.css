@@ -1,0 +1,202 @@
+html {
+  font-size: 16px;
+  background: #EB3349;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F45C43, #EB3349);  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#F45C43), to(#EB3349));
+  background: -webkit-linear-gradient(left, #F45C43, #EB3349);
+  background: -o-linear-gradient(left, #F45C43, #EB3349);
+  background: linear-gradient(to right, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  height: 50px;
+  background-color: white;
+  margin-bottom: 2.5rem;
+  padding-top: 10px;
+  -webkit-box-shadow: 7px 10px 51px -8px rgba(0,0,0,0.51);
+  box-shadow: 7px 10px 51px -8px rgba(0,0,0,0.51);
+}
+
+h1 {
+  margin: 0;
+  font-weight: 300;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  font-size: 1.125rem;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.container {
+  max-width: 600px;
+  min-width: 380px;
+  margin: 0 auto;
+}
+
+.application {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  -webkit-box-shadow: 7px 10px 51px -8px rgba(0,0,0,0.51);
+  box-shadow: 7px 10px 51px -8px rgba(0,0,0,0.51);
+}
+
+.checked {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.remove {
+  display: inline-block;
+  content: '';
+  width: 18px;
+  height: 18px;
+  -webkit-transform: translateY(3px);
+      -ms-transform: translateY(3px);
+          transform: translateY(3px);
+  margin-right: 5px;
+  position: relative;
+}
+
+
+.remove::before {
+  width: 18px;
+  height: 4px;
+  content: '';
+  background-color: #EB3349;
+  position: absolute;
+  top: 7px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: transparent;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.remove::after {
+  width: 18px;
+  height: 4px;
+  content: '';
+  background-color: #EB3349;
+  position: absolute;
+  top: 7px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  background-color: transparent;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+li:nth-child(even) {
+  background-color: #ededed;
+}
+
+li:hover .remove::before,
+li:hover .remove::after {
+  background-color: #EB3349;
+}
+
+.add-new {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  margin-top: 20px;
+}
+
+.add-new__add-input {
+  -webkit-box-flex: 6;
+      -ms-flex-positive: 6;
+          flex-grow: 6;
+  border: 1px solid #e0e2e5;
+}
+
+.add-new__add-btn {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: #588cd8;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 2px solid #588cd8;
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.add-new__add-btn:hover,
+.add-new__add-btn:focus {
+  background-color: #2861bf;
+  border-color: #2861bf;
+}
+
+.add-new__add-btn::before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
+  
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  margin-left: -9px;
+}
+
+
+.add-new__add-input::-webkit-input-placeholder {
+  font-weight: 300;
+  font-size: 1.025rem;
+}
+
+
+.add-new__add-input:-ms-input-placeholder {
+  font-weight: 300;
+  font-size: 1.025rem;
+}
+
+
+.add-new__add-input::placeholder {
+  font-weight: 300;
+  font-size: 1.025rem;
+}
+
+.add-new__add-input{
+  font-size: 1.025rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding-left: 22px;
+  color: black;
+  border-radius: 2px;
+}
+
+.add-new__add-input:focus {
+  outline: 0;
+  border-color: #EB3349;
+}
